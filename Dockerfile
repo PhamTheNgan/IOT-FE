@@ -16,7 +16,7 @@ FROM nginx:1.25-alpine
 
 # Copy các file đã build từ giai đoạn 1 vào thư mục mặc định của Nginx
 # Lưu ý: Nếu dự án của bạn dùng Vite thì sửa 'build' thành 'dist'
-COPY --from=build_stage /app/build /usr/share/nginx/html
+COPY --from=build_stage /app/dist /usr/share/nginx/html
 
 # Mở cổng 80 trong container
 EXPOSE 80
